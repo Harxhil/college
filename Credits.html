@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,900;1,900&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-surface-variant": "#59413c",
+            "primary-fixed": "#ffdad3",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#f7ddd1",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#fcdeb3",
+            "primary": "#ab2e16",
+            "primary-container": "#ce462c",
+            "surface": "#fef8f4",
+            "on-surface": "#1d1b19",
+            "inverse-surface": "#32302e",
+            "on-tertiary-fixed": "#261912",
+            "surface-variant": "#e7e1de",
+            "inverse-primary": "#ffb4a5",
+            "secondary": "#705b39",
+            "background": "#fef8f4",
+            "primary-fixed-dim": "#ffb4a5",
+            "tertiary": "#6b584f",
+            "on-primary": "#ffffff",
+            "on-tertiary-container": "#fffbff",
+            "on-primary-container": "#fffbff",
+            "error": "#ba1a1a",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#1d1b19",
+            "surface-container-high": "#ede7e3",
+            "tertiary-fixed-dim": "#dac2b6",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fef8f4",
+            "surface-dim": "#ded9d5",
+            "on-secondary-fixed-variant": "#574424",
+            "on-secondary-container": "#77613f",
+            "surface-tint": "#af3018",
+            "on-primary-fixed": "#3e0500",
+            "on-secondary": "#ffffff",
+            "inverse-on-surface": "#f5f0ec",
+            "tertiary-container": "#847067",
+            "outline": "#8d706b",
+            "on-primary-fixed-variant": "#8d1702",
+            "surface-container-low": "#f8f2ef",
+            "secondary-fixed-dim": "#dfc299",
+            "on-secondary-fixed": "#271901",
+            "outline-variant": "#e1bfb8",
+            "on-tertiary-fixed-variant": "#54433b",
+            "surface-container-highest": "#e7e1de",
+            "on-error-container": "#93000a",
+            "surface-container": "#f3ede9",
+            "secondary-container": "#fcdeb3"
+          },
+          fontFamily: {
+            "headline": ["Epilogue"],
+            "body": ["Noto Serif"],
+            "label": ["Plus Jakarta Sans"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .pressed-card {
+      box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .scrapbook-rotate-right {
+      transform: rotate(1.5deg);
+    }
+
+    .scrapbook-rotate-left {
+      transform: rotate(-1.5deg);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+  <header class="bg-[#fef8f4] dark:bg-stone-900 sticky top-0 z-50">
+    <nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+      <div
+        class="text-2xl font-black text-[#ab2e16] dark:text-[#ce462c] italic font-headline uppercase tracking-tighter">
+        Batch 2023-2026 Diploma IT
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-stone-500 dark:text-stone-400 font-medium pb-1 hover:text-[#ab2e16] transition-colors duration-300 font-label"
+          href="Welcome.html">Welcome</a>
+        <a class="text-stone-500 dark:text-stone-400 font-medium pb-1 hover:text-[#ab2e16] transition-colors duration-300 font-label"
+          href="Diary.html">Diary</a>
+        <a class="text-[#ab2e16] dark:text-[#ce462c] font-bold border-b-2 border-[#ab2e16] pb-1 hover:text-[#ab2e16] transition-colors duration-300 font-label"
+          href="Credits.html">Credits</a>
+      </div>
+      <button class="md:hidden text-primary">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </nav>
+  </header>
+  <main class="min-h-screen pt-12 pb-24 px-6 max-w-5xl mx-auto flex flex-col items-center">
+    <section class="w-full mb-16 text-center">
+      <h1
+        class="font-headline text-5xl md:text-7xl font-black text-primary italic uppercase tracking-tighter mb-4 scrapbook-rotate-left inline-block">
+        Credits
+      </h1>
+      <div class="h-1 w-24 bg-primary-container mx-auto rounded-full mt-4"></div>
+    </section>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 w-full items-center">
+      <div class="md:col-span-7 order-2 md:order-1">
+        <div class="bg-surface-container-low p-10 rounded-lg relative overflow-hidden pressed-card">
+          <div class="relative z-10">
+            <p class="font-body text-xl text-on-surface-variant leading-relaxed mb-8 italic">
+              "Different paths, same destination: A heart full of memories. Proudly curated for the best batch to ever
+              walk these halls."
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                </div>
+                <div>
+                  <h3 class="font-label font-bold text-on-surface">Curated by</h3>
+                  <p class="font-body text-primary">Harshil &amp; The Creative Team</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                </div>
+                <div>
+                  <h3 class="font-label font-bold text-on-surface">Vision</h3>
+                  <p class="font-body text-primary">A Tactile Keepsake for Tomorrow</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -right-6 opacity-5 pointer-events-none">
+            <span class="material-symbols-outlined text-[12rem]">history_edu</span>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-5 order-1 md:order-2 flex justify-center">
+        <div class="relative scrapbook-rotate-right hover:rotate-0 transition-transform duration-500 ease-in-out">
+          <div class="bg-surface-container-highest p-4 pb-12 shadow-xl rounded-DEFAULT">
+            <img alt="Collaborative team environment"
+              class="w-full aspect-[4/5] object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700"
+              data-alt="Group of diverse students laughing and working together around a wooden table in a sunlit cozy library setting"
+              src="contact card/credit.jpeg" />
+            <div class="mt-4 text-center">
+              <span class="font-label text-sm font-medium text-on-surface-variant italic">Memories in the making,
+                2024</span>
+            </div>
+          </div>
+          <div
+            class="absolute -top-4 -left-4 w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center shadow-md">
+            <span class="material-symbols-outlined text-on-primary-fixed">push_pin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-24 w-full flex flex-col items-center gap-12">
+      <div class="w-full h-[1px] bg-outline-variant opacity-30"></div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 w-full text-center">
+        <div>
+          <span class="font-headline text-3xl text-primary block">30</span>
+          <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Students</span>
+        </div>
+        <div>
+          <span class="font-headline text-3xl text-primary block">3</span>
+          <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Years</span>
+        </div>
+        <div>
+          <span class="font-headline text-3xl text-primary block">∞</span>
+          <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Memories</span>
+        </div>
+        <div>
+          <span class="font-headline text-3xl text-primary block">1</span>
+          <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Legacy</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="bg-[#EACDA3] dark:bg-stone-800 w-full py-8 flex flex-col items-center justify-center text-center px-4 docked full-width bottom-0 rounded-t-[20px] shadow-[inset_0px_2px_10px_rgba(0,0,0,0.03)] mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col items-center gap-2">
+      <div class="text-lg font-bold text-[#ab2e16] font-headline uppercase tracking-tight mb-2">
+        Batch 2023-2026 Diploma IT
+      </div>
+      <p class="font-['Noto_Serif'] text-sm font-medium text-[#ab2e16] dark:text-[#ce462c] italic">
+        Created with Harshil ❤️ for the Batch of 2026
+      </p>
+      <div class="flex gap-4 mt-4 opacity-60">
+        <span class="material-symbols-outlined text-[#ab2e16]">auto_awesome</span>
+        <span class="material-symbols-outlined text-[#ab2e16]">menu_book</span>
+        <span class="material-symbols-outlined text-[#ab2e16]">photo_album</span>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

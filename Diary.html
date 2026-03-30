@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Contact Diary | Batch 2023-2026</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,900;1,900&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
+    .poetic-script {
+      font-family: 'Caveat', cursive;
+      transform: rotate(-2deg);
+    }
+
+    .pressed-card {
+      box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.03);
+      background-color: #FFE5D9;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-surface-variant": "#59413c",
+            "primary-fixed": "#ffdad3",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#f7ddd1",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#fcdeb3",
+            "primary": "#ab2e16",
+            "primary-container": "#ce462c",
+            "surface": "#fef8f4",
+            "on-surface": "#1d1b19",
+            "inverse-surface": "#32302e",
+            "on-tertiary-fixed": "#261912",
+            "surface-variant": "#e7e1de",
+            "inverse-primary": "#ffb4a5",
+            "secondary": "#705b39",
+            "background": "#fef8f4",
+            "primary-fixed-dim": "#ffb4a5",
+            "tertiary": "#6b584f",
+            "on-primary": "#ffffff",
+            "on-tertiary-container": "#fffbff",
+            "on-primary-container": "#fffbff",
+            "error": "#ba1a1a",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#1d1b19",
+            "surface-container-high": "#ede7e3",
+            "tertiary-fixed-dim": "#dac2b6",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fef8f4",
+            "surface-dim": "#ded9d5",
+            "on-secondary-fixed-variant": "#574424",
+            "on-secondary-container": "#77613f",
+            "surface-tint": "#af3018",
+            "on-primary-fixed": "#3e0500",
+            "on-secondary": "#ffffff",
+            "inverse-on-surface": "#f5f0ec",
+            "tertiary-container": "#847067",
+            "outline": "#8d706b",
+            "on-primary-fixed-variant": "#8d1702",
+            "surface-container-low": "#f8f2ef",
+            "secondary-fixed-dim": "#dfc299",
+            "on-secondary-fixed": "#271901",
+            "outline-variant": "#e1bfb8",
+            "on-tertiary-fixed-variant": "#54433b",
+            "surface-container-highest": "#e7e1de",
+            "on-error-container": "#93000a",
+            "surface-container": "#f3ede9",
+            "secondary-container": "#fcdeb3"
+          },
+          fontFamily: {
+            "headline": ["Epilogue"],
+            "body": ["Noto Serif"],
+            "label": ["Plus Jakarta Sans"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body
+  class="bg-[#FFF9F5] text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed transition-opacity duration-300">
+  <!-- TopAppBar -->
+  <nav class="bg-[#fef8f4] dark:bg-stone-900 sticky top-0 z-50">
+    <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+      <div
+        class="text-2xl font-black text-[#ab2e16] dark:text-[#ce462c] italic font-['Epilogue'] uppercase tracking-tighter">
+        Batch 2023-2026 Diploma IT
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-stone-500 dark:text-stone-400 font-medium pb-1 hover:text-[#ab2e16] transition-colors duration-300 font-['Plus_Jakarta_Sans']"
+          href="Welcome.html">Welcome</a>
+        <a class="text-[#ab2e16] dark:text-[#ce462c] font-bold border-b-2 border-[#ab2e16] pb-1 hover:text-[#ab2e16] transition-colors duration-300 font-['Plus_Jakarta_Sans']"
+          href="Diary.html">Diary</a>
+        <a class="text-stone-500 dark:text-stone-400 font-medium pb-1 hover:text-[#ab2e16] transition-colors duration-300 font-['Plus_Jakarta_Sans']"
+          href="Credits.html">Credits</a>
+      </div>
+      <div class="md:hidden">
+        <span class="material-symbols-outlined text-[#ab2e16]">menu</span>
+      </div>
+    </div>
+  </nav>
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <!-- Header Section -->
+    <header class="mb-20 text-center">
+      <h1 class="poetic-script text-6xl md:text-8xl text-primary mb-4">Contact Diary</h1>
+      <p class="font-body text-on-surface-variant italic text-lg">A collection of moments and connections from our
+        journey together.</p>
+    </header>
+    <!-- Grid of Portrait Contact Cards (20 cards) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Template Card for Loop -->
+      <!-- Card 1: Arjun -->
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] overflow-hidden rounded-[16px] -rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover"
+            data-alt="Candid portrait of a young man smiling" src="contact card/Harshil.jpeg" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface tracking-tight uppercase">Harshil</h3>
+          <p class="font-label text-primary font-semibold tracking-wider mt-1 text-sm">+91 70965 88023</p>
+        </div>
+        <div class="absolute -bottom-2 -left-2 rotate-12">
+          <span class="material-symbols-outlined text-secondary text-3xl opacity-30">favorite</span>
+        </div>
+      </div>
+      <!-- Card 2: Priya -->
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] overflow-hidden rounded-[16px] rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover" data-alt="Happy young woman with flowing hair"
+            src="contact card/Harsh.jpeg" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface tracking-tight uppercase">Harsh</h3>
+          <p class="font-label text-primary font-semibold tracking-wider mt-1 text-sm">+91 70168 32677</p>
+        </div>
+      </div>
+      <!-- Card 3: Dhruvi -->
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] overflow-hidden rounded-[16px] -rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover" src="contact card/Dhruvi.jpeg" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface tracking-tight uppercase">Dhruvi</h3>
+          <p class="font-label text-primary font-semibold tracking-wider mt-1 text-sm">+91 99135 10253</p>
+        </div>
+      </div>
+      <!-- Card 4: Neel -->
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] overflow-hidden rounded-[16px] rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover" src="contact card/Neel.jpeg" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface tracking-tight uppercase">Neel</h3>
+          <p class="font-label text-primary font-semibold tracking-wider mt-1 text-sm">+91 72850 34457</p>
+        </div>
+      </div>
+      <!-- Card 5: Pruthuraj -->
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] bg-stone-200 overflow-hidden rounded-[16px] -rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover" src="contact card/Pruthuraj.jpeg" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface tracking-tight uppercase">Pruthuraj</h3>
+          <p class="font-label text-primary font-semibold tracking-wider mt-1 text-sm">+91 90545 12266</p>
+        </div>
+      </div>
+      <!-- Card 6: Adnan -->
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] bg-stone-200 overflow-hidden rounded-[16px] rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover" src="contact card/mahi.jpg" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface tracking-tight uppercase">Mahi</h3>
+          <p class="font-label text-primary font-semibold tracking-wider mt-1 text-sm">+91 95587 83287</p>
+        </div>
+      </div>
+      <!-- Card 7: Dev -->
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] bg-stone-200 overflow-hidden rounded-[16px] -rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover" src="contact card/Pooja.jpg" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Pooja</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 83471 98048</p>
+        </div>
+      </div>
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] bg-stone-200 overflow-hidden rounded-[16px] rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover" src="contact card/Adnan.jpeg" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Adnan</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 99740 11496</p>
+        </div>
+      </div>
+      <!-- Repeat cards 9-20 briefly to meet requirement -->
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] bg-stone-200 overflow-hidden rounded-[16px] -rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover" src="contact card/Dev.png" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Dev</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 88497 70375</p>
+        </div>
+      </div>
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] bg-stone-200 overflow-hidden rounded-[16px] -rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover" src="contact card/Riddhi.jpeg" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Riddhi</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 88490 62364</p>
+        </div>
+      </div>
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] bg-stone-200 overflow-hidden rounded-[16px] -rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover" src="contact card/Happy.jpeg" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Happy</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 90544 51382</p>
+        </div>
+      </div>
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] bg-stone-200 overflow-hidden rounded-[16px] -rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover" src="contact card/prince.png" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Prince</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 63529 02121</p>
+        </div>
+      </div>
+      <div
+        class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 relative group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+        <div
+          class="w-full aspect-[3/4] bg-stone-200 overflow-hidden rounded-[16px] -rotate-1 group-hover:rotate-0 transition-transform duration-300">
+          <img alt="Student Portrait" class="w-full h-full object-cover" src="contact card/Tushar.png" />
+        </div>
+        <div class="flex-1 flex flex-col justify-end p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Tushar</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 99780 41877</p>
+        </div>
+      </div>
+      <div class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 group hover:scale-[1.02] transition-all">
+        <div class="w-full aspect-[3/4] bg-stone-200 rounded-[16px] overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-primary/20"><span
+              class="material-symbols-outlined text-4xl">face</span></div>
+        </div>
+        <div class="p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Student 15</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 9XXXX XXXXX</p>
+        </div>
+      </div>
+      <div class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 group hover:scale-[1.02] transition-all">
+        <div class="w-full aspect-[3/4] bg-stone-200 rounded-[16px] overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-primary/20"><span
+              class="material-symbols-outlined text-4xl">face</span></div>
+        </div>
+        <div class="p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Student 16</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 9XXXX XXXXX</p>
+        </div>
+      </div>
+      <div class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 group hover:scale-[1.02] transition-all">
+        <div class="w-full aspect-[3/4] bg-stone-200 rounded-[16px] overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-primary/20"><span
+              class="material-symbols-outlined text-4xl">face</span></div>
+        </div>
+        <div class="p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Student 17</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 9XXXX XXXXX</p>
+        </div>
+      </div>
+      <div class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 group hover:scale-[1.02] transition-all">
+        <div class="w-full aspect-[3/4] bg-stone-200 rounded-[16px] overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-primary/20"><span
+              class="material-symbols-outlined text-4xl">face</span></div>
+        </div>
+        <div class="p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Student 18</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 9XXXX XXXXX</p>
+        </div>
+      </div>
+      <div class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 group hover:scale-[1.02] transition-all">
+        <div class="w-full aspect-[3/4] bg-stone-200 rounded-[16px] overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-primary/20"><span
+              class="material-symbols-outlined text-4xl">face</span></div>
+        </div>
+        <div class="p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Student 19</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 9XXXX XXXXX</p>
+        </div>
+      </div>
+      <div class="pressed-card rounded-[20px] p-4 flex flex-col gap-4 group hover:scale-[1.02] transition-all">
+        <div class="w-full aspect-[3/4] bg-stone-200 rounded-[16px] overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-primary/20"><span
+              class="material-symbols-outlined text-4xl">face</span></div>
+        </div>
+        <div class="p-2">
+          <h3 class="font-label text-xl font-bold text-on-surface uppercase">Student 20</h3>
+          <p class="font-label text-primary font-semibold text-sm">+91 9XXXX XXXXX</p>
+        </div>
+      </div>
+    </div>
+    <!-- Add New Contact (The Diary Input style) -->
+    <div class="mt-24 pt-16 border-t-0 text-center">
+      <h2 class="poetic-script text-4xl text-on-surface-variant mb-8">Add a new memory...</h2>
+      <div class="max-w-md mx-auto">
+        <div class="border-b border-outline-variant py-2">
+          <input
+            class="w-full bg-transparent border-none focus:ring-0 poetic-script text-2xl text-primary placeholder:opacity-40"
+            placeholder="Who should we remember?" type="text" />
+        </div>
+        <button
+          class="mt-8 bg-primary text-on-primary font-label px-8 py-3 rounded-full hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-primary/20">
+          Pin to Diary
+        </button>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer
+    class="bg-[#EACDA3] dark:bg-stone-800 w-full py-8 flex flex-col items-center justify-center text-center px-4 rounded-t-[20px] mt-20">
+    <div class="text-lg font-bold text-[#ab2e16] font-['Epilogue'] mb-2">Batch 2026</div>
+    <div class="text-stone-700 dark:text-stone-300 font-['Plus_Jakarta_Sans'] text-sm font-medium">
+      Created with Harshil ❤️ for the Batch of 2026
+    </div>
+  </footer>
+  <!-- Mobile Bottom Navigation Shell (Contextual) -->
+  <div
+    class="md:hidden fixed bottom-0 left-0 right-0 bg-[#fef8f4] dark:bg-stone-900 px-6 py-3 flex justify-around items-center shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50">
+    <button class="flex flex-col items-center gap-1 text-stone-500">
+      <span class="material-symbols-outlined">home</span>
+      <span class="text-[10px] font-label">Welcome</span>
+    </button>
+    <button class="flex flex-col items-center gap-1 text-[#ab2e16] font-bold">
+      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">book</span>
+      <span class="text-[10px] font-label">Diary</span>
+    </button>
+    <button class="flex flex-col items-center gap-1 text-stone-500">
+      <span class="material-symbols-outlined">stars</span>
+      <span class="text-[10px] font-label">Credits</span>
+    </button>
+  </div>
+</body>
+
+</html>
